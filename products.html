@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Products • Grow with Deen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --green: #16a34a;
+            --gold: #d4af37;
+            --muted: #94a3b8;
+            --bg: #07070a;
+            --white: #fff;
+            --max: 1080px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, Arial;
+            background: #050506;
+            color: var(--white);
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 16px;
+            max-width: var(--max);
+            margin: 0 auto;
+        }
+
+        .logo-img {
+            height: 44px;
+            width: auto;
+            display: block;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* nav default */
+        nav {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: var(--muted);
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--gold);
+        }
+
+        /* hamburger hidden by default */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* mobile styles */
+        @media(max-width: 720px) {
+            nav {
+                position: absolute;
+                top: 70px;
+                right: 16px;
+                background: #111;
+                flex-direction: column;
+                padding: 12px;
+                border-radius: 8px;
+                display: none;
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+            }
+
+            nav a {
+                color: var(--white);
+                padding: 8px 0;
+                font-size: 15px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            body.nav-open nav {
+                display: flex;
+            }
+        }
+
+        .container {
+            max-width: var(--max);
+            margin: 20px auto;
+            padding: 0 16px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 6px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            /* mobile default */
+            gap: 14px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            padding: 16px;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+            transition: transform 0.2s;
+        }
+
+        /* Desktop view fix */
+        @media(min-width: 640px) {
+            .card {
+                flex-direction: row;
+                /* side by side */
+                align-items: center;
+            }
+        }
+
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(212, 175, 55, 0.5), 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+
+        .thumb {
+            width: 100%;
+            max-width: 120px;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+        }
+
+
+        .info h4 {
+            margin-bottom: 6px;
+            font-size: 18px;
+        }
+
+        .muted {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .price {
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 6px;
+            background: var(--green);
+            padding: 10px 14px;
+            border-radius: 10px;
+            color: #041014;
+            font-weight: 700;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        @media(min-width: 840px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .thumb {
+                width: 140px;
+            }
+        }
+
+        footer {
+            max-width: var(--max);
+            margin: 40px auto 20px;
+            padding: 0 16px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img class="logo-img" src="Deen__1_-removebg-preview.png" alt="Grow with Deen Logo">
+            <div class="brand-text">
+                <div style="font-weight:700;font-size:16px">Grow with Deen</div>
+                <div style="font-size:12px;color:var(--muted)">Halal income for students & youth</div>
+            </div>
+        </div>
+
+        <!-- Hamburger button -->
+        <div class="menu-toggle" onclick="document.body.classList.toggle('nav-open')">
+            ☰
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html" style="color: var(--gold);">Products</a>
+            <a href="https://instagram.com/grow.withDeen" target="_blank" rel="noopener">Instagram</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 data-aos="fade-up" style="color: #16a34a;">Guides & Resources<span style="color: white;">:</span></h1>
+        <p class="muted" data-aos="fade-up" data-aos-delay="80">
+            Start with the beginner-friendly halal earning guide — short, practical, and made for students.
+        </p>
+
+        <div class="grid">
+            <div class="card" data-aos="fade-right">
+                <img src="cover-Halal-earning .jpg" alt="cover" class="thumb">
+                <div class="info">
+                    <h4>Grow with Deen & Dunya: Halal Earning</h4>
+                    <p class="muted">13-page guide: Create & sell ebooks, Gumroad setup, and promotion tips.</p>
+                </div>
+                <div class="price">
+                    <div style="font-weight:800;font-size:16px">$8</div>
+                    <a class="btn" href="halal-earning.html">View</a>
+                </div>
+            </div>
+
+            <!-- Future product cards go here -->
+        </div>
+    </main>
+
+    <footer>
+        © Grow with Deen • Follow on Instagram @grow.withDeen
+    </footer>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 650, once: true });</script>
+</body>
+
+</html>

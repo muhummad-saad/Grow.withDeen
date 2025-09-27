@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grow with Deen — Halal Earning Guide</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --green: #16a34a;
+      --gold: #d4af37;
+      --muted: #94a3b8;
+      --bg: #060607;
+      --white: #fff;
+      --max: 980px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, system-ui, Arial;
+      background: linear-gradient(180deg, #060607, #0b0b0b);
+      color: var(--white);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      padding: 14px 16px;
+      max-width: var(--max);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* nav default */
+    nav {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    nav a {
+      font-weight: 600;
+      color: var(--muted);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    /* hamburger hidden by default */
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* mobile styles */
+    @media(max-width:720px) {
+      nav {
+        position: absolute;
+        top: 70px;
+        right: 16px;
+        background: #111;
+        flex-direction: column;
+        padding: 12px;
+        border-radius: 8px;
+        display: none;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+      }
+
+      nav a {
+        color: var(--white);
+        padding: 8px 0;
+        font-size: 15px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      body.nav-open nav {
+        display: flex;
+      }
+    }
+
+    .container {
+      max-width: var(--max);
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+
+    .product {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+      padding: 20px;
+      border-radius: 14px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      align-items: center;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .cover {
+      width: 180px;
+      border-radius: 10px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .cover:hover{
+        box-shadow: 0 8px 22px rgba(212, 175, 55, 0.5), 0 4px 12px rgba(212, 175, 55, 0.3);
+    }
+
+    .price {
+      margin-left: auto;
+      font-weight: 800;
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--green);
+      color: #041014;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      color: #000;
+    }
+
+    ul {
+      color: var(--muted);
+      margin-top: 8px;
+      padding-left: 18px;
+    }
+
+    ul li {
+      margin-bottom: 6px;
+    }
+
+    @media(min-width:760px) {
+      .product {
+        grid-template-columns: 220px 1fr;
+      }
+
+      .cover {
+        width: 200px;
+      }
+    }
+
+    footer {
+      max-width: var(--max);
+      margin: 40px auto 20px;
+      padding: 0 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="brand">
+      <img class="logo-img" src="Deen__1_-removebg-preview.png" alt="Grow with Deen Logo">
+      <div class="brand-text">
+        <div style="font-weight:700;font-size:16px">Grow with Deen</div>
+        <div style="font-size:12px;color:var(--muted)">Halal income for students & youth</div>
+      </div>
+    </div>
+
+    <!-- Hamburger button -->
+    <div class="menu-toggle" onclick="document.body.classList.toggle('nav-open')">
+      ☰
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="https://instagram.com/grow.withDeen" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </header>
+
+  <main class="container" data-aos="fade-up">
+    <article class="product">
+      <div style="text-align:center">
+        <img src="cover-Halal-earning .jpg" alt="Halal Earning Guide Cover" class="cover">
+        <div style="margin-top:10px;color:var(--muted)">PDF • 13 pages</div>
+      </div>
+
+      <div>
+        <div style="display:flex;align-items:center;gap:12px">
+          <h1 style="margin:0;font-size:22px">Grow with Deen & Dunya: Halal Earning</h1>
+          <div class="price">$8</div>
+        </div>
+
+        <p style="color:var(--muted);margin-top:10px">
+          Beginner-friendly guide for students and youth. Learn to create simple ebooks and sell them ethically for halal income.
+        </p>
+
+        <h3 style="margin-top:16px">What you'll get</h3>
+        <ul>
+          <li>Clear steps to choose a niche</li>
+          <li>How to create your first ebook (tools & tips)</li>
+          <li>Gumroad setup and instant delivery</li>
+          <li>Promotion ideas for Instagram & Reels</li>
+          <li>Repeat & Grow system</li>
+        </ul>
+
+        <p style="margin-top:18px;color:var(--muted)"><strong>Ready to start?</strong></p>
+        <!-- Replace with your real Gumroad product link -->
+        <a class="btn" href="GUMROAD_LINK" target="_blank" rel="noopener">Buy on Gumroad</a>
+
+        <p style="margin-top:12px;color:var(--muted)">
+          After purchase you'll receive an instant PDF download via Gumroad.
+        </p>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    © Grow with Deen • Follow on Instagram @grow.withDeen
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' });
+  </script>
+</body>
+
+</html>
